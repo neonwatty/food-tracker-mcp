@@ -1,0 +1,47 @@
+{
+  "name": "@neonwatty/food-tracker-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for food tracking and calorie logging using USDA FoodData Central",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "food-tracker-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["mcp", "model-context-protocol", "food-tracker", "nutrition", "usda", "calorie-counter", "meal-tracking", "claude", "ai-tools"],
+  "author": "neonwatty",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neonwatty/food-tracker-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neonwatty/food-tracker-mcp/issues"
+  },
+  "homepage": "https://github.com/neonwatty/food-tracker-mcp#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.1",
+    "better-sqlite3": "^12.5.0",
+    "dotenv": "^17.2.3",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.0.3",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
